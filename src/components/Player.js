@@ -1,0 +1,50 @@
+import React from 'react';
+//------------Components-------------
+import Setting from './Setting';
+import Timer from './Timer';
+import FinishPage from './FinishPage';
+import PlayerContext from './PlayerContext';
+//------------React functions--------
+import {useState} from 'react';
+
+
+
+
+function Player() {
+
+
+  const [playerStatus, setPlayerStatus]= useState('setting');
+  const [isEnglish, setIsEnglish]= useState(false);
+
+  return (
+    <div className="c-player">
+    <PlayerContext.Provider
+    value={{
+      playerStatus,
+      setPlayerStatus,
+      duration: 15,
+      isEnglish,
+      setIsEnglish,
+    }}
+    >
+    <PlayerSwitch status={playerStatus}/>  
+   </PlayerContext.Provider>
+  </div>
+  )
+}
+
+
+function PlayerSwitch(props){
+  
+  const playerStatus=props.status;
+  if (playerStatus=='setting'){
+    return <Setting/>
+  }
+  else if (playerStatus=='timer'){
+    return <Timer/>
+  }
+  else if (playerStatus=='finish'){
+    return <FinishPage/>
+  }
+}
+export default Player;
