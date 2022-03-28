@@ -80,13 +80,13 @@ function Timer() {
   }
   return (
     <div className='c-setting'>
-      {/* <div className='languageToggle' id='languageText'>
+      <div className='languageToggle' id='languageText'>
           {isEnglish? "ENG":"中文"}<span><HiSwitchHorizontal/></span>
-        </div> */}
+        </div>
       <p id='title'>{isEnglish? "Walking":"行走冥想"}</p>
       <BsArrowLeftShort className='backArrow' onClick={back}/>
           <audio ref={audioPlayer}  preload="metadata" loop autoPlay>
-              {isEnglish? <source src='./audio/15-Minute Walking Meditation.mp3' type='audio/mpeg'></source>
+              {isEnglish? <source src='./audio/Meditation_EN.mp3' type='audio/mpeg'></source>
               : <source src='./audio/Meditation_CN.mp3' type='audio/mpeg'></source>}
           </audio>
       <div className='c-timer'>

@@ -47,9 +47,9 @@ function Setting(props) {
     <div className='c-setting'>
 
       {/* Setting */}
-      {/* <div className='languageToggle'onClick={languageSwitch}>
+      <div className='languageToggle'onClick={languageSwitch}>
           {isEnglish? "ENG":"中文"}<span><HiSwitchHorizontal/></span>
-        </div> */}
+        </div>
         <p id='title'>{isEnglish? "Walking":"行走冥想"}</p>
           <div className='c-timer'>
         <CircularProgressbar 
