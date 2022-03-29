@@ -39,19 +39,16 @@ function Setting(props) {
       settingsInfo.setIsPlaying(true);
     }
 
-    const isEnglish = settingsInfo.isEnglish;
-    const languageSwitch = ()=>{
-        settingsInfo.setIsEnglish(!isEnglish);
-    }
+
   return (
     
     <div className='c-setting'>
 
       {/* Setting */}
-      <div className='languageToggle'onClick={languageSwitch}>
+      {/* <div className='languageToggle'onClick={languageSwitch}>
           {isEnglish? "ENG":"中文"}<span><HiSwitchHorizontal/></span>
-        </div>
-        <p id='title'>{isEnglish? "Walking":"行走冥想"}</p>
+        </div> */}
+        <p id='title'>行走冥想</p>
           <div className='c-timer'>
         <CircularProgressbar 
         value={percentage}
