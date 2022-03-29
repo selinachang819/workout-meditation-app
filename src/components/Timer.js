@@ -79,6 +79,8 @@ function Timer() {
     settingsInfo.setPlayerStatus('setting');
     settingsInfo.setIsPlaying(false);
   }
+
+ 
   return (
     <div className='c-setting'>
       {/* <div className='languageToggle' id='languageText'>
@@ -86,7 +88,7 @@ function Timer() {
         </div> */}
       <p id='title'>行走冥想</p>
       <BsArrowLeftShort className='backArrow' onClick={back}/>
-          <audio ref={audioPlayer}  preload="metadata" loop autoPlay>
+          <audio ref={audioPlayer}  preload="metadata" autoPlay>
               <source src='./audio/Meditation_CN.mp3' type='audio/mpeg'></source>
           </audio>
       <div className='c-timer'>
