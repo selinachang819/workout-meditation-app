@@ -15,6 +15,7 @@ function Player() {
 
   const [playerStatus, setPlayerStatus]= useState('setting');
   const [isEnglish, setIsEnglish]= useState(false);
+  const [isPlaying, setIsPlaying]= useState(false);
 
   return (
     <div className="c-player">
@@ -25,6 +26,8 @@ function Player() {
       duration: 15,
       isEnglish,
       setIsEnglish,
+      isPlaying,
+      setIsPlaying
     }}
     >
     <PlayerSwitch status={playerStatus}/>  

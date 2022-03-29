@@ -25,7 +25,6 @@ function Timer() {
       accentTwo: "#B2BB9E"
     };
 
-    const [isPlaying, setIsPlaying] = useState (true);
 
     const totalSeconds = settingsInfo.duration * 60;
     const [secondsLeft, setSecondsLeft]= useState(totalSeconds);
@@ -33,6 +32,7 @@ function Timer() {
     const [percentage, setPercentage]= useState(100);
 
     const isEnglish = settingsInfo.isEnglish;
+    const isPlaying = settingsInfo.isPlaying;
 
   useEffect(()=>{
 
@@ -50,6 +50,7 @@ function Timer() {
     
     if (secondsLeft == 0){
         settingsInfo.setPlayerStatus('finish');
+        settingsInfo.setIsPlaying(false);
     }
     return ()=> clearInterval(interval);
 
@@ -66,9 +67,9 @@ function Timer() {
 
   const togglePlayPaused = () =>{
     //toggle switch for each one of the clicks
-    const prevValue = isPlaying;
-    setIsPlaying(!prevValue);
-    if(!prevValue){
+    
+    settingsInfo.setIsPlaying(!isPlaying);
+    if(isPlaying==false){
       audioPlayer.current.play();
     } else{
       audioPlayer.current.pause();
@@ -77,6 +78,7 @@ function Timer() {
 
   const back = () =>{
     settingsInfo.setPlayerStatus('setting');
+    settingsInfo.setIsPlaying(false);
   }
   return (
     <div className='c-setting'>

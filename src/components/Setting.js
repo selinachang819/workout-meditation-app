@@ -36,6 +36,7 @@ function Setting(props) {
 
     const initiator = ()=>{
       settingsInfo.setPlayerStatus('timer');
+      settingsInfo.setIsPlaying(true);
     }
 
     const isEnglish = settingsInfo.isEnglish;
