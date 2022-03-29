@@ -40,13 +40,13 @@ function Player() {
 function PlayerSwitch(props){
   
   const playerStatus=props.status;
-  if (playerStatus=='setting'){
+  if (playerStatus==='setting'){
     return <Setting/>
   }
-  else if (playerStatus=='timer'){
+  else if (playerStatus==='timer'){
     return <Timer/>
   }
-  else if (playerStatus=='finish'){
+  else if (playerStatus==='finish'){
     return <FinishPage/>
   }
 }

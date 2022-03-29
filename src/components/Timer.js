@@ -48,7 +48,7 @@ function Timer() {
       }
     }, 1000);
     
-    if (secondsLeft == 0){
+    if (secondsLeft === 0){
         settingsInfo.setPlayerStatus('finish');
         settingsInfo.setIsPlaying(false);
     }
@@ -69,7 +69,7 @@ function Timer() {
     //toggle switch for each one of the clicks
     
     settingsInfo.setIsPlaying(!isPlaying);
-    if(isPlaying==false){
+    if(isPlaying===false){
       audioPlayer.current.play();
     } else{
       audioPlayer.current.pause();
