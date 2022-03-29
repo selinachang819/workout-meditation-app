@@ -14,6 +14,7 @@ function Player() {
 
 
   const [playerStatus, setPlayerStatus]= useState('setting');
+  const [isEnglish, setIsEnglish]= useState(false);
   const [isPlaying, setIsPlaying]= useState(false);
 
   return (
@@ -23,6 +24,8 @@ function Player() {
       playerStatus,
       setPlayerStatus,
       duration: 15,
+      isEnglish,
+      setIsEnglish,
       isPlaying,
       setIsPlaying
     }}
