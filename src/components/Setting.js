@@ -1,9 +1,8 @@
 import React from 'react';
 //------------Components-------------
-import Theme from './Theme';
 import PlayerContext from './PlayerContext';
 //------------React functions--------
-import { useState, useRef,useContext } from 'react';
+import {useContext } from 'react';
 //-------------Packages-----------------------
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';

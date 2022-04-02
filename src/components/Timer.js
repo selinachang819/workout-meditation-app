@@ -1,6 +1,5 @@
 import React from 'react';
 //------------Components-------------
-import Theme from './Theme';
 import PlayerContext from './PlayerContext';
 //------------React functions--------
 import { useState, useRef,useContext,useEffect } from 'react';
