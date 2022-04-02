@@ -53,7 +53,7 @@ function Timer() {
     }
     return ()=> clearInterval(interval);
 
-  },[secondsLeft, isPlaying])
+  },[isPlaying,percentage,secondsLeft,settingsInfo,totalSeconds])
 
   
   const calculateTime = (secs)=>{
